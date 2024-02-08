@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema ERP</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.icons.iconify.design/1/1.0.7/iconify.min.css"
+            rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"
+            media="screen" />
+        <link rel="icon" type="image/png" href="./img/Icon.png" sizes="64x64">
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- Logo à esquerda -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./img/DevSolutio - SulutioERP.png"
+                        alt="Logo SolutioERP" width="150">
+                </a>
+                <!-- Botão do menu responsivo -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Opções de navegação à direita -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vendas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cadastro
+                            </a>
+                            <ul class="dropdown-menu navbar-color">
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="./cadClienteFornecedor.html">Clientes
+                                        e Fornecedores</a></li>
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="./cadProduto.html">Produtos</a>
+                                </li>
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="./cadCategoria.html">Categoria</a>
+                                </li>
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="./cadVendedor.html">Vendedores</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Suprimentos
+                            </a>
+                            <ul class="dropdown-menu navbar-color">
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="controleEstoque.html">Controle de
+                                        Estoque</a></li>
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="pedidoCompra.html">Pedidos de
+                                        Compra</a></li>
+                            </ul>
+                        </li>
+                        <!-- Atalhos para módulos principais -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Módulos Principais
+                            </a>
+                            <ul class="dropdown-menu navbar-color">
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="#">Financeiro</a></li>
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="#">Recursos Humanos</a></li>
+                                <li><a
+                                        class="dropdown-item nav-link navbar-color"
+                                        href="#">Marketing</a></li>
+                                <!-- Adicione outros atalhos conforme necessário -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- Content -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Cadastro de Clientes e Fornecedores</h1>
+        <div class="card">
+            <div class="card-body">
+                <!-- Dados Cadastrais -->
+                <form id="formCadastro">
+                    <h3 class="mb-4">Dados Cadastrais</h3>
+                    <div class="row mb-3">
+                        <div class="col-md-1">
+                            <label for="id" class="form-label">Código:</label>
+                            <input type="text" class="form-control" id="id" name="id" disabled>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="fantasy" class="form-label">Fantasia:</label>
+                            <input type="text" class="form-control" id="fantasy" name="fantasy">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="typeClient" class="form-label">Tipo de Pessoa:</label>
+                            <select class="form-select" id="typeClient" name="typeClient" onchange="mostrarCampo()">
+                                <option value="fisica">Física</option>
+                                <option value="juridica">Jurídica</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3" id="campo_cpf">
+                            <label for="cpf" class="form-label">CPF:</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf">
+                        </div>
+                        <div class="col-md-3" id="campo_cnpj" style="display: none;">
+                            <label for="cnpj" class="form-label">CNPJ:</label>
+                            <input type="text" class="form-control" id="cnpj" name="cnpj">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="clientSince" class="form-label">Cliente desde:</label>
+                            <input type="date" class="form-control" id="clientSince" name="clientSince">
+                        </div>
+                    </div>
+                
+                    <hr class="featurette-divider">
+                
+                    <!-- Endereço -->
+                    <h3 class="mb-4">Endereço</h3>
+                    <div class="row mb-3">
+                        <div class="col-md-2">
+                            <label for="cep" class="form-label">CEP:</label>
+                            <input type="text" class="form-control" id="cep" name="cep">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="state" class="form-label">UF:</label>
+                            <select class="form-select" id="state" name="state">
+                                <option value>Selecione a UF</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="city" class="form-label">Cidade:</label>
+                            <input type="text" class="form-control" id="city" name="city">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="neighborhood" class="form-label">Bairro:</label>
+                            <input type="text" class="form-control" id="neighborhood" name="neighborhood">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="adress" class="form-label">Endereço:</label>
+                            <input type="text" class="form-control" id="adress" name="adress">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="number" class="form-label">Número:</label>
+                            <input type="text" class="form-control" id="number" name="number">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="complement" class="form-label">Complemento:</label>
+                            <input type="text" class="form-control" id="complement" name="complement">
+                        </div>
+                    </div>
+                
+                    <hr class="featurette-divider">
+                
+                    <!-- Informações de Contato -->
+                    <h3 class="mb-4">Informações de Contato</h3>
+                    <div class="row mb-3">
+                        <div class="col-md-2">
+                            <label for="telephone" class="form-label">Telefone:</label>
+                            <input type="text" class="form-control" id="telephone" name="telephone">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="cellNumber" class="form-label">Celular:</label>
+                            <input type="text" class="form-control" id="cellNumber" name="cellNumber">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="email" class="form-label">E-Mail:</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="emailNFe" class="form-label">E-Mail para NFe:</label>
+                            <input type="text" class="form-control" id="emailNFe" name="emailNFe">
+                        </div>
+                    </div>
+                
+                    <hr class="featurette-divider">
+                
+                    <!-- Dados Adicionais -->
+                    <h3 class="mb-4">Dados Adicionais</h3>
+                    <div class="row mb-3">
+                        <div class="col-md-2">
+                            <label for="creditLimit" class="form-label">Limite de Crédito:</label>
+                            <input type="text" class="form-control" id="creditLimit" name="creditLimit">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="conditionPayment" class="form-label">Condição de Pagamento:</label>
+                            <input type="text" class="form-control" id="conditionPayment" name="conditionPayment">
+                        </div>
+                    </div>
+                
+                    <!-- Observações -->
+                    <h3 class="mb-4">Observações</h3>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <textarea name="observation" id="observation" class="form-control" rows="4"></textarea>
+                        </div>
+                    </div>
+                </form>                
+            
+                <!-- Botão de Submit -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="btnCadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/conectionApiClients.js"></script>
+    <!-- Seu JavaScript personalizado -->
+    <script>
+        // Adicione seu código JavaScript personalizado aqui
+    </script>
+</body>
+
+</html>

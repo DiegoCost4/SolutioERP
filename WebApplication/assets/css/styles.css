@@ -1,0 +1,147 @@
+/* Define a palheta de cores */
+:root {
+    --primary-color: #231F20;
+    --secondary-color: #FCB900;
+    --highlight-color: #D91818;
+    --background-color: #F2F2F2;
+}
+
+body {
+    padding-top: 70px; /* Ajuste conforme a altura da navbar */
+    margin-bottom: 100px; /* Ajuste conforme a altura do footer */
+}
+
+.main-content {
+    min-height: calc(100vh - 170px); /* Ajuste conforme a altura total da navbar e do footer */
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-toggler {
+    color: #ffffff !important; /* Cor preta */
+}
+
+.card {
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #6c757d;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.2rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    padding: 8px 0;
+}
+
+.featurette-heading {
+    color: var(--primary-color);
+}
+
+/* Estilização do menu suspenso */
+.dropdown-menu {
+    background-color: var(--primary-color) !important; /* Cor de fundo do menu suspenso */
+}
+
+/* Estilização das opções do menu suspenso quando o mouse passa sobre elas */
+.navbar-color .dropdown-item:hover {
+    background-color: var(--secondary-color) !important; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o campo de seleção */
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23333'%3E%3Cpath fill-rule='evenodd' d='M10 12l6-6H4l6 6z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: center;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 2.75rem 0.375rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Estilos para quando o campo está focado */
+.form-select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.featurette {
+    display: flex;
+    align-items: center;
+}
+
+.featurette .col-md-7,
+.featurette .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-image-container {
+    width: 150px; /* Largura desejada para o quadrado */
+    height: 150px; /* Altura desejada para o quadrado */
+    border: 1px solid #ced4da; /* Borda */
+    padding: 5px; /* Espaçamento interno */
+    overflow: hidden; /* Para manter a imagem dentro do quadrado */
+}
+
+.product-image-container input[type="file"] {
+    width: 100%; /* Garantir que o input preencha o espaço do container */
+    height: 100%; /* Garantir que o input preencha o espaço do container */
+    opacity: 0; /* Esconder o input */
+    cursor: pointer; /* Mudar cursor para indicar que é clicável */
+}
+
+.navbar-nav .nav-link {
+    padding: 0 15px; /* Espaçamento interno das opções de navegação */
+}
+
+.navbar-nav .dropdown-toggle::after {
+    display: none; /* Oculta a seta do dropdown toggle */
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: var(--primary-color); /* Cor de fundo do menu suspenso */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #fff; /* Cor do texto das opções do menu suspenso */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: var(--secondary-color) !important; /* Cor de fundo ao passar o mouse */
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.2rem; /* Tamanho do ícone de notificação */
+    color: #fff; /* Cor do ícone de notificação */
+    margin-right: 10px; /* Espaçamento à direita do ícone de notificação */
+}
+
+.navbar-nav .nav-link img {
+    border-radius: 50%; /* Bordas arredondadas para a foto de perfil */
+    margin-right: 10px; /* Espaçamento à direita da foto de perfil */
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutio ERP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" media="screen" />
+    <link rel="icon" type="image/png" href="./img/Icon.png" sizes="64x64">
+    <style>
+        /* Custom CSS for this page */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ced4da !important;
+        }
+
+        .btn-primary {
+            background-color: #007bff !important;
+            border-color: #007bff !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3 !important;
+            border-color: #0056b3 !important;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!-- Logo à esquerda -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/DevSolutio - SulutioERP.png" alt="Logo SolutioERP" width="150" href="./index.html">
+            </a>
+            <!-- Botão do menu responsivo -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Opções de navegação à direita -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Funcionalidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Planos e Preços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Fale Conosco</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-5 main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="py-5 text-center text-light bg-dark">
+            <div class="container">
+                <h1 class="display-4">Solutio ERP</h1>
+                <p class="lead">A solução completa para a gestão do seu negócio.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Solicite uma demonstração</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Recursos do Solutio ERP</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="bx:bx-shopping-bag" data-inline="false"></span>
+                        </div>
+                        <h3>Vendas</h3>
+                        <p>Registre pedidos, vendas de balcão e gerencie seu processo de vendas de forma eficiente.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="carbon:users" data-inline="false"></span>
+                        </div>
+                        <h3>Cadastro de Clientes e Fornecedores</h3>
+                        <p>Gerencie informações de clientes, fornecedores e mantenha seus registros atualizados.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="bi:layers" data-inline="false"></span>
+                        </div>
+                        <h3>Suprimentos e Estoque</h3>
+                        <p>Controle seu estoque, faça pedidos de compra e mantenha seus produtos organizados.</p>
+                    </div>
+                    <!-- Adicione mais colunas conforme necessário -->
+                </div>
+            </div>
+        </section>
+<!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Planos e Preços</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Plano Básico</h3>
+                        <p class="card-text">Recursos essenciais para pequenas empresas.</p>
+                        <h4 class="card-price">$19.99/mês</h4>
+                        <a href="#" class="btn btn-primary">Escolher Plano</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Plano Padrão</h3>
+                        <p class="card-text">Recursos avançados para empresas em crescimento.</p>
+                        <h4 class="card-price">$39.99/mês</h4>
+                        <a href="#" class="btn btn-primary">Escolher Plano</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Plano Premium</h3>
+                        <p class="card-text">Recursos premium para empresas estabelecidas.</p>
+                        <h4 class="card-price">$59.99/mês</h4>
+                        <a href="#" class="btn btn-primary">Escolher Plano</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Entre em Contato</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 DevSolution. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
